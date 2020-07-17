@@ -3,7 +3,7 @@
 ## How to install?
 
 * The manual installation ensures the latest version is on the system.
-Therefore, use this [link](https://www.terraform.io/downloads.html) 
+Therefore, use this [link](https://www.terraform.io/downloads.html)
 and copy the URL for your OS.
 
 * Run `wget <link>`.
@@ -11,7 +11,7 @@ and copy the URL for your OS.
 
 * unzip <terraform.zip> file.
 
-* Verify if terraform is installed by running the terraform script as,
+* Verify if terraform is installed correctly by running the terraform script as
 `./terraform`. You should see an output showing related to tf commands.
 
 * `echo $PATH` and choose the path you want terraform script to move.
