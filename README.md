@@ -9,7 +9,7 @@ and copy the URL for your OS.
 * Run `wget <link>`.
   * [For Mac OS] If you don't have wget and unzip, run `brew install wget`
 
-* unzip <terraform.zip> file.
+* `unzip <terraform.zip>` file.
 
 * Verify if terraform is installed correctly by running the terraform script as
 `./terraform`. You should see an output showing related to tf commands.
@@ -46,13 +46,13 @@ changes.
 
 * `terraform show` - It outputs the content of terraform.tfstate file.
 
-* ls .terraform/plugins` - It is a directory that contains currently installed
+* `ls .terraform/plugins` - It is a directory that contains currently installed
 plugin.
 
 ## Terraform state file
 
 * This file can be found in the directory, from where the tf plan is being 
-executed. It contains all the recently provisioned, resource specific informat-
+executed. It contains all the recently provisioned, resource specific informat
 ion, which even plan doesn't show. Terraform uses it to find the delta between
 what the current and desired state of a resource. It is usually most beneficial
 to track any manual changes, that has been performed from the console.
