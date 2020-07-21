@@ -22,6 +22,19 @@ and copy the URL for your OS.
 installed one; run `cd /tmp; terraform` and you should see the same tf
 help command output.
 
+## Directory structure
+
+### Plugins
+
+* There are two types of providers, Hashicorp Distributed and 3rdparty. The 
+former refers to continual testing and intergration of providers by Hashicorp.
+And upon executing `terraform init`, the provider plugins would be automaticallu
+installed. However, this is not the case with the 3rdparty providers (aka
+Community providers) and requires manual downloading of the plugin.
+  * `.terraform/plugins/` - is the directory for HC's distributed plugin.
+  * `~/.terraform.d/plugins/` - is for the 3rdparty plugins. Make sure to create
+    this directory if it does not exist already. And move the plugin file here.
+
 ## Terraform commands
 
 * `terraform init` - initializes the directory where you would want to run the
@@ -46,16 +59,15 @@ changes.
 
 * `terraform show` - It outputs the content of terraform.tfstate file.
 
-* `ls .terraform/plugins` - It is a directory that contains currently installed
 plugin.
 
 ## Terraform state file
 
 * This file can be found in the directory, from where the tf plan is being 
-executed. It contains all the recently provisioned, resource specific informat
-ion, which even plan doesn't show. Terraform uses it to find the delta between
-what the current and desired state of a resource. It is usually most beneficial
-to track any manual changes, that has been performed from the console.
+executed. It contains all the recently provisioned, resource specific 
+information, which even plan doesn't show. Terraform uses it to find the delta 
+between what the current and desired state of a resource. It is usually most 
+beneficial to track any manual changes that has been performed via the console.
 
 ## Gotchas
 
