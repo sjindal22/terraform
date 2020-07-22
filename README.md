@@ -26,14 +26,19 @@ help command output.
 
 ### Plugins
 
-* There are two types of providers, Hashicorp Distributed and 3rdparty. The 
-former refers to continual testing and intergration of providers by Hashicorp.
-And upon executing `terraform init`, the provider plugins would be automaticallu
-installed. However, this is not the case with the 3rdparty providers (aka
-Community providers) and requires manual downloading of the plugin.
+* There are two types of providers, 
+[Hashicorp Distributed](https://www.terraform.io/docs/providers/type/major-index.html) 
+& [3rdparty](https://www.terraform.io/docs/providers/type/community-index.html).
+The former refers to continual testing and intergration of providers by 
+Hashicorp. And upon executing `terraform init`, the provider plugins would be 
+automatically installed. However, this is not the case with the 3rdparty 
+providers (aka Community providers) and requires manual downloading of the 
+plugin.
   * `.terraform/plugins/` - is the directory for HC's distributed plugin.
   * `~/.terraform.d/plugins/` - is for the 3rdparty plugins. Make sure to create
     this directory if it does not exist already. And move the plugin file here.
+    So that the terraform is able to initialize correctly when you execute, 
+    `terraform init`.
 
 ## Terraform commands
 
